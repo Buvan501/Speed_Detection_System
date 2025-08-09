@@ -1,0 +1,16 @@
+VIDEO_SOURCE: "data/sample_videos/demo_video.mp4"  # or 0 for webcam
+WEIGHTS_PATH: "weights/yolov7.pt"
+DEVICE: "cpu"           # or "cuda" if available
+METER_PER_PIXEL: 0.02   # used if no homography calib exists
+FILTER_CLASSES:
+  - car
+  - truck
+  - bus
+  - motorcycle
+  - bicycle
+CALIB_PATH: "calib/H.npy"   # homography if produced by calibrate.py
+LOG_CSV_PATH: "exports/logs/speed_log.csv"
+FPS_OVERRIDE: null
+FRAME_SKIP: 0            # infer every (FRAME_SKIP+1)th frame
+MIN_TRACK_LENGTH: 2      # minimum stored points before reporting speed
+SMOOTHING: 3             # smoothing window size for speed averaging
